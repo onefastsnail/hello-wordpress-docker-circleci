@@ -10,9 +10,9 @@ function publicScriptsAndStyles() {
     // let's get a specific version of jquery
     wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js', array(), null, false );
 
-    wp_enqueue_script( 'ourquery', get_template_directory_uri().'/assets/dist/js/bundle.js', array(), null, true );
+    wp_enqueue_script( 'ourquery', get_template_directory_uri().'/assets/dist/js/bundle.'.filemtime(get_stylesheet_directory() . '/assets/dist/js/bundle.js').'.js', array(), null, true );
 
-    wp_enqueue_style( 'ourcss', get_template_directory_uri().'/assets/dist/css/bundle.css' );
+    wp_enqueue_style( 'ourcss', get_template_directory_uri().'/assets/dist/css/bundle.'.filemtime(get_stylesheet_directory() . '/assets/dist/css/bundle.css').'.css' );
 
 }
 
