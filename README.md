@@ -44,3 +44,7 @@ Attached to a Slack channel to notify other project members of the build and its
 * Use either docker compose, simple bash commands, maybe Ansible to run the relevant Docker commands on production
 * Fetch Wordpress, plugins and other PHP libs via Composer
 * Use Gulp/Webpack for build tools to create a clean build everytime
+
+## Notes
+
+* Putting WP in a subdirectory? Would simplify things, but WP complains ie multisite and some plugins when this happens, hence my decision to have a src dist nature to blend the files together.
