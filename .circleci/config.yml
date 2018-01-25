@@ -33,6 +33,9 @@ jobs:
             - ./node_modules
       - run: yarn run build
 
+      # a remote environment will be created, and our current primary container will be configured to use it, any docker-related commands we use will be safely executed in this new environment
+      - setup_remote_docker
+
       # build image and push to dockerhub
       - run:
           name: Build application Docker image
