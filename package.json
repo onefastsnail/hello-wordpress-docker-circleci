@@ -30,8 +30,11 @@
   "devDependencies": {},
   "scripts": {
     "dev": "run-p gulpDev webpackDev",
+    "build": "run-p gulpBuild webpackBuild",
     "gulpDev": "gulp",
     "webpackDev": "webpack -d --watch",
+    "gulpBuild": "gulp build",
+    "webpackBuild": "webpack -p",
     "test": "mocha test/files.spec.js",
     "lint": "./node_modules/.bin/eslint src/wp-content/themes/theme/assets/js/index.js"
   },
