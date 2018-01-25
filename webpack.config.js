@@ -22,6 +22,11 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader'
+            },
+            {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
