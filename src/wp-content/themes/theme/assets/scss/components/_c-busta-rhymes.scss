@@ -1,0 +1,54 @@
+.c-busta-rhymes {
+    padding: 3em 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+
+    &__quote {
+        border: 0;
+        font-size: 2em;
+        line-height: 1.1;
+        font-weight: 600;
+        width: 86%;
+        position: relative;
+        margin: auto;
+
+        &:before, &:after {
+            font-family: Arial;
+            font-size: 1em;
+            position: absolute;
+            line-height: 1;
+        }
+
+        &:before {
+            content: '\201C';
+            left: -7%;
+        }
+
+        &:after {
+            content: '\201D';
+            right: -7%;
+        }
+
+        @media only screen and (min-width: 768px) {
+            font-size: 4em;
+        }
+
+        @media only screen and (min-width : 1200px) {
+            font-size: 5em;
+        }
+    }
+
+    &__author {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2.5em;
+
+        img {
+            max-width: 50px;
+            margin-right: 1rem;
+        }
+
+    }
+}

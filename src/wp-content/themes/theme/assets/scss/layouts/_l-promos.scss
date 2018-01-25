@@ -1,0 +1,55 @@
+.l-promos {
+    z-index: 1;
+    position: relative;
+    margin: -1rem;
+
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media only screen and (min-width: 992px) {
+        height: 24em;
+    }
+
+    &__item {
+        position: relative;
+        padding: 1rem;
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    &[data-count="2"] {
+        .l-promos__item {
+            @media only screen and (min-width: 768px) {
+                width: 50%;
+            }
+        }
+    }
+
+    &[data-count="3"] {
+        @media only screen and (min-width: 992px) {
+            flex-direction: column;
+        }
+
+        .l-promos__item {
+            @media only screen and (min-width: 768px) {
+                width: 50%;
+
+                &:first-child {
+                    width: 100%;
+                }
+            }
+
+            @media only screen and (min-width: 992px) {
+                width: 50%;
+                height: 50%;
+
+                &:first-child {
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

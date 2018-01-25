@@ -1,0 +1,65 @@
+.h-wysiwyg {
+    position: relative;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 1.4em;
+        margin-bottom: 0.4em;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    ul,
+    ol {
+        margin-bottom: 1em;
+
+        ul,
+        ol {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        margin-bottom: 1.5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    hr {
+        margin-bottom: 1.5em;
+    }
+
+    dl,
+    dd,
+    blockquote {
+        margin-bottom: 1em;
+
+        &+ol,
+        &+ul {
+            margin-bottom: 0;
+        }
+    }
+
+    /* Editor image styles */
+    img {
+        /* overwrite height-attribute set by WP */
+        height: auto;
+    }
+
+    pre {
+        padding: 1em 2em;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: block;
+        border-radius: 2px;
+        font-size: 0.9em;
+        margin: 0 0 1em;
+    }
+}

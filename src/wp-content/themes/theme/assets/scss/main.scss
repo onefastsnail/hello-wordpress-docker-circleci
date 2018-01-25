@@ -1,0 +1,51 @@
+/**
+ * Vendor
+ * Such as Bootstrap
+ */
+@import "vendor/bootstrap";
+
+/**
+ * Base
+ * variable and what not
+ */
+@import "base/variables";
+
+/**
+ * Mixins
+ *
+ */
+@import "mixins/container";
+@import "mixins/bp";
+
+/**
+ * Base
+ *
+ * include the base helpers, typography etc
+ */
+@import "base/base";
+@import "base/helpers";
+
+/**
+ * Layouts
+ * A bunch of layouts
+ */
+@import "layouts/l-cards";
+@import "layouts/l-promos";
+@import "layouts/l-columns";
+
+/**
+ * Sections
+ * Block contain of layouts and components, and those should styled individually with modifiers
+ */
+@import "sections/s-example";
+@import "sections/s-biggie";
+
+/**
+ * Components
+ * Include the components core which can/would be amended to that project
+ */
+@import "components/c-card";
+@import "components/c-background-image";
+@import "components/c-busta-rhymes";
+@import "components/c-something";
+@import "components/c-overlay";

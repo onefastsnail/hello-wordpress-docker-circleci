@@ -1,0 +1,40 @@
+.c-card {
+    width: 100%;
+    background: #fff;
+    position: relative;
+
+    &__image {
+        background: url(http://www.heyuguys.com/images/2015/10/Back-to-the-Future-Promo-Photo.jpg)
+            center
+            center
+            no-repeat;
+        background-size: cover;
+        padding-top: 80%;
+
+        &--skewed {
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
+        }
+    }
+
+    &__content {
+        padding: 1em;
+    }
+
+    &__meta {
+        margin: 0;
+    }
+
+    &__title {
+        margin: 0.5em 0 2em 0;
+    }
+
+    &__read-more {
+        &:after {
+            content: "";
+        }
+    }
+
+    &--shadow {
+        box-shadow: 0 8px 16px -6px rgba(0, 0, 0, 0.2);
+    }
+}

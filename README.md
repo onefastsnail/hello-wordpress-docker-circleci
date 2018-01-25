@@ -13,7 +13,7 @@ An experiment with a [Wordpress](https://wordpress.org) project running in [Dock
 * Implement PHP unit testing
 * To be able to deploy from simply pushing work to the git repository.
 * Use a docker registry to hold application code, so project deployment and rebuilds are easy and require no local project to be built.
-* To use branches/tags for staging versions of the application
+* To use branches/tags for staging and production versions of the application
 * To get CI build time as fast as possible by caching steps, building my own image with the tools required
 * To utilize some logging services for PHP, Nginx
 * Use either docker compose, simple bash commands, maybe Ansible to run the relevant Docker commands on production

@@ -1,0 +1,38 @@
+.l-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -1rem;
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    &__item {
+        width: 50%;
+        padding: 1rem;
+
+        @include bp(sm) {
+            width: 33.333%;
+        }
+
+        @include bp(lg) {
+            width: 25%;
+        }
+
+        @include bp(xl) {
+            width: 16.66%;
+        }
+    }
+
+    // for our bad ass veterans
+    .no-flexbox & {
+        display: block;
+
+        &__item {
+            float: left;
+        }
+    }
+}

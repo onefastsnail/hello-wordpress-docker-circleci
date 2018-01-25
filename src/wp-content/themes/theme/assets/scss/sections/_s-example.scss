@@ -1,0 +1,15 @@
+.s-example {
+
+    &__container {
+        @include container();
+    }
+
+    &:not(:last-child) {
+        margin-top: 3em;
+    }
+
+    // only for demo purposes :P
+    &--busta-rhymes {
+        background: $brand-color;
+    }
+}

@@ -1,0 +1,40 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+	outline:none;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.462;
+    background-color: $body-bg;
+	color: $text-color;
+}
+
+// a little dirty hack to speed our beloved animations from animate.css
+.animated {
+    -webkit-animation-fill-mode: backwards;
+    animation-duration: 0.2s;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+	transition: all 0.2s;
+
+	&:hover, &:focus {
+		text-decoration: none;
+		cursor: pointer;
+		color: inherit;
+    }
+
+	&:focus {}
+}

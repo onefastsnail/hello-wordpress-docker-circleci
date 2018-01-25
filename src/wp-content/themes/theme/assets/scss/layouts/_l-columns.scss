@@ -1,0 +1,57 @@
+.l-columns {
+    @include make-row();
+
+    &__item {
+        @include make-md-column(12);
+
+        // different column width variations
+        [data-column-count="1"] & {
+            @include make-md-column(10);
+            @include make-md-column-push(1);
+        }
+
+        [data-column-count="2"] & {
+            @include make-md-column(6);
+        }
+
+        [data-column-count="3"] & {
+            @include make-md-column(4);
+        }
+
+        [data-column-count="4"] & {
+            @include make-sm-column(6);
+            @include make-md-column(3);
+        }
+
+        // margins when stacked
+        &:not(:last-child) {
+            margin-bottom: 1em;
+
+            @include bp(md) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &--centered {
+        @include bp(md) {
+            // to help make equal columns
+            display: flex;
+        }
+
+        .l-columns__item {
+            @include bp(md) {
+                display: flex; // to help make equal columns
+                align-items: center; // align in the middle
+            }
+        }
+    }
+
+    &--no-gutter {
+        @include make-row($gutter: 0);
+
+        .l-columns__item {
+            padding: 0;
+        }
+    }
+}
