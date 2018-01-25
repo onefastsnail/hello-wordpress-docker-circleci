@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+  mysql:
+    image: mariadb:10.3.4
+    container_name: mysql
+    ports:
+        - 3306:3306
+    volumes:
+        - ./data/mariadb:/var/lib/mysql
+    env_file:
+        - ./.env
