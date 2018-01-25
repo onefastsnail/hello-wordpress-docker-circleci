@@ -8,7 +8,8 @@ jobs:
 
     steps:
       - checkout
-
+      
+      # composer
       - run: sudo composer self-update
       - restore_cache:
           keys:
@@ -20,7 +21,8 @@ jobs:
             - ./vendor
           key: composer-v1-{{ checksum "composer.json" }}
 
-    - restore_cache:
+      # yarn
+      - restore_cache:
           keys:
             - node-v1-{{ checksum "package.json" }}
             - node-v1-
@@ -28,4 +30,4 @@ jobs:
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}
           paths:
-            - node_modules
+            - ./node_modules
