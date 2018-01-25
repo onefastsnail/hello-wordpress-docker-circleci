@@ -42,4 +42,4 @@ data/
 
 #project
 dist/
-vendor/
+/vendor
