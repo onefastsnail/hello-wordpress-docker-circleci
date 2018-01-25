@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "express": "^4.16.2",
-    "lodash": "^4.17.4",
     "pre-commit": "^1.2.2",
     "puppeteer": "^1.0.0"
   },

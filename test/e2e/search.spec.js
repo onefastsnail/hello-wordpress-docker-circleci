@@ -1,12 +1,10 @@
-const assert = require('assert');
-
 describe('search', function () {
     let page;
 
     // as we have a browser in the global node object, for this test lets spin up a new page/tab to work with
     before(async function () {
         page = await browser.newPage();
-        await page.goto('https://google.com'); 
+        await page.goto('https://google.com');
     });
 
     // after the test close that page/tab
@@ -19,9 +17,9 @@ describe('search', function () {
         await page.waitFor('input[name=q]');
         // Type our query into the search bar
         await page.type('input[name=q]', 'onefastsnail');
-    
+
         await page.click('input[type="submit"]');
-    
+
         // Wait for the results to show up
         await page.waitForSelector('h3 a');
 
@@ -32,7 +30,6 @@ describe('search', function () {
         });
 
         expect(links).to.be.an('array');
-        //assert.isArray(links, 'an array of anchors');        
 
     });
 

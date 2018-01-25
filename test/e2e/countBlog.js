@@ -1,5 +1,3 @@
-const assert = require('assert');
-
 describe('blog items', function () {
     let page;
 
