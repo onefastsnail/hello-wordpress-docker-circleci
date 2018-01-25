@@ -36,7 +36,7 @@ jobs:
       # a remote environment will be created, and our current primary container will be configured to use it, any docker-related commands we use will be safely executed in this new environment
       - setup_remote_docker
 
-      # build image and push to dockerhub
+      # build image, push to dockerhub, and deploy
       - run:
           name: Build application Docker image
           command: |
@@ -46,3 +46,7 @@ jobs:
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push $DOCKERHUB_REPO:$CIRCLE_BRANCH
+      - run: 
+          name: Deploy, ssh in, pull image, and run
+          command: |
+            cat deploy.sh | ssh -o StrictHostKeyChecking=no $DROPLET_USER@$DROPLET_IP
