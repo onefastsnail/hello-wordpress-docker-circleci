@@ -23,6 +23,8 @@ An experiment with a [Wordpress](https://wordpress.org) project running in [Dock
 
 On development i currently use Docker Composer to orchestrate the containers, on production currently just a simple container, could be done with Ansible also i guess.
 
+As mount bindings overrule the directory the mount points too, in development we can simply mount our code, and in production the code is copied in. 
+
 ## Circle CI
 
 Attached to a Slack channel to notify other project members of the build and its movements.
