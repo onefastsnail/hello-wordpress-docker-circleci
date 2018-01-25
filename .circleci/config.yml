@@ -31,3 +31,15 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      - run: yarn run build
+
+      # build image and push to dockerhub
+      - run:
+          name: Build application Docker image
+          command: |
+            docker build -t $DOCKERHUB_REPO:$CIRCLE_BRANCH .
+      - run:
+          name: Push the Docker image to the registry
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker push $DOCKERHUB_REPO:$CIRCLE_BRANCH
