@@ -31,6 +31,7 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      - run: yarn run test
       - run: yarn run build
 
       # a remote environment will be created, and our current primary container will be configured to use it, any docker-related commands we use will be safely executed in this new environment
