@@ -1,0 +1,25 @@
+{
+  "name": "hello-circleci-wordpress-docker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "del": "^3.0.0",
+    "dotenv": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.1",
+    "run-sequence": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onefastsnail/hello-circleci-wordpress-docker.git"
+  },
+  "author": "Paul Stewart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onefastsnail/hello-circleci-wordpress-docker/issues"
+  },
+  "homepage": "https://github.com/onefastsnail/hello-circleci-wordpress-docker#readme"
+}

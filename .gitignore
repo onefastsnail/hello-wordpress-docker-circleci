@@ -39,3 +39,7 @@ auth.json
 
 #ignore local persistant data such as databases
 data/
+
+#project
+dist/
+vendor/

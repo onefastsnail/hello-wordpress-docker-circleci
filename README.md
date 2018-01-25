@@ -14,7 +14,9 @@ An experiment with a [Wordpress](https://wordpress.org) project running in [Dock
 * To use branches/tags for staging versions of the application
 * To get CI build time as fast as possible by caching steps, building my own image with the tools required
 * To utilize some logging services for PHP, Nginx
-* Use either docker compose, simple bash commands, maybe Ansible to run the relevant Docker commands on production 
+* Use either docker compose, simple bash commands, maybe Ansible to run the relevant Docker commands on production
+* Fetch Wordpress, plugins and other PHP libs via Composer
+* Use Gulp/Webpack for build tools to create a clean build everytime
 
 ## Development flow
 

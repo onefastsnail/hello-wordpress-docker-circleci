@@ -1,0 +1,34 @@
+{
+  "name": "hello-circlci-wordpress-docker",
+  "type": "project",
+  "description": "A Wordpress build",
+  "homepage": "https://www.onefastsnail.com/",
+  "authors": [
+    {
+      "name": "Paul Stewart",
+      "email": "paul@onefastsnail.com",
+      "homepage": "https://www.onefastsnail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "composer/installers" : "~1.0",
+    "johnpbloch/wordpress-core-installer": "~0.2",
+    "johnpbloch/wordpress-core": "^4.9.2",
+    "vlucas/phpdotenv": "2.4.0"
+  },
+  "extra": {
+    "wordpress-install-dir": "vendor/wordpress",
+    "installer-paths": {
+      "src/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "src/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "src/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}
