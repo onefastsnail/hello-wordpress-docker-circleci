@@ -10,15 +10,22 @@ jobs:
       - checkout
 
       - run: sudo composer self-update
-
       - restore_cache:
           keys:
             - composer-v1-{{ checksum "composer.json" }}
             - composer-v1-
-
       - run: composer install -n --prefer-dist
-
       - save_cache:
           paths:
             - ./vendor
           key: composer-v1-{{ checksum "composer.json" }}
+
+    - restore_cache:
+          keys:
+            - node-v1-{{ checksum "package.json" }}
+            - node-v1-
+      - run: yarn install
+      - save_cache:
+          key: node-v1-{{ checksum "package.json" }}
+          paths:
+            - node_modules
