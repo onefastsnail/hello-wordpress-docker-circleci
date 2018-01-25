@@ -38,8 +38,9 @@ auth.json
 .env
 
 #ignore local persistant data such as databases
-data/
+/data
 
 #project
-dist/
+/dist
 /vendor
+/src/wp-content/plugins
