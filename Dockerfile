@@ -1,10 +1,13 @@
-FROM php:7.2-apache
+# to speed up the build im have pushed the commented code below to a prebuilt image on my registry
+FROM onefastsnail/wordpress-apache:latest
 
-ENV APACHE_DOCUMENT_ROOT /var/www/html/dist
+# FROM php:7.2-apache
 
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+# ENV APACHE_DOCUMENT_ROOT /var/www/html/dist
 
-RUN docker-php-ext-install mysqli
+# RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
+
+# RUN docker-php-ext-install mysqli
 
 COPY . /var/www/html
 
