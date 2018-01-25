@@ -2,11 +2,14 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const srcDir = path.resolve(__dirname, 'src/wp-content/themes/theme/assets/js');
-const distDir = path.resolve(__dirname, 'dist/wp-content/themes/theme/assets/dist');
+const envPath = './.env';
+const dotenv = require('dotenv').config({ path: envPath });
+
+const srcDir = path.resolve(__dirname, `src/wp-content/themes/${process.env.WP_THEME_NAME}/assets/js`);
+const distDir = path.resolve(__dirname, `dist/wp-content/themes/${process.env.WP_THEME_NAME}/assets/dist`);
 
 module.exports = {
-    entry: srcDir + '/index.js',
+    entry: `${srcDir}/index.js`,
     output: {
         path: distDir,
         filename: 'js/bundle.js'
