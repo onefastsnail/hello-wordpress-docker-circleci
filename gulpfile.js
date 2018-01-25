@@ -20,7 +20,7 @@ const dotenv = require('dotenv').config({ path: envPath });
 const paths = {
     src: 'src/',
     dist: 'dist/',
-    copyIgnore: ['vendor/wordpress/**/*', 'src/**/*'],
+    copyIgnore: ['vendor/wordpress/**/*', 'src/**/*', 'src/.htaccess'],
     themePath: 'wp-content/themes/' + process.env.WP_THEME_NAME + '/',
     php: {
         src: ['src/wp-content/themes/' + process.env.WP_THEME_NAME + '/**/*.php', 'src/wp-config.php']
