@@ -22,6 +22,12 @@ An experiment with a [Wordpress](https://wordpress.org) project running in [Dock
 
 ## Usage
 
+1. Copy and configure `.env.example` to `.env`
+2. `docker-compose up -d` to spin up the Docker stack
+3. `yarn install` to install our build deps
+4. `yarn run dev` to run the build tools for development
+5. And enjoy [http://localhost](http://localhost) 
+
 ## Docker
 
 ## Circle CI
