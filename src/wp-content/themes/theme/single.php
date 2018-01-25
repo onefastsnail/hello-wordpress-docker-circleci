@@ -10,9 +10,11 @@ get_header();
             <div class="col-xs-12">
             <?php if ( have_posts() ) :
                 while ( have_posts() ) : the_post(); ?>
-                    
-                    <p><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></p>
-                    
+
+                    <h1><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h1>
+
+                    <?php the_content(); ?>
+
                 <?php endwhile;
             endif; ?>
             </div>

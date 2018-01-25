@@ -9,6 +9,8 @@ FROM onefastsnail/wordpress-apache:latest
 
 # RUN docker-php-ext-install mysqli
 
+RUN a2enmod rewrite
+
 COPY . /var/www/html
 
 RUN chown -R www-data:www-data /var/www/html
