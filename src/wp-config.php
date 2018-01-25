@@ -20,8 +20,13 @@
 
 require dirname(__DIR__).'/vendor/autoload.php';
 
-$dotenv = new Dotenv\Dotenv(dirname(__DIR__));
-$dotenv->load();
+try {
+	$dotenv = new Dotenv\Dotenv(dirname(__DIR__));
+	$dotenv->load();
+}
+catch(Exception $e) {
+	//echo "<pre>"; print_r($e); echo "</pre>";
+}
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
