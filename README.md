@@ -22,6 +22,11 @@ An experiment with a [Wordpress](https://wordpress.org) project running in [Dock
 
 ## Development flow
 
+1. Do your code changes
+2. git add
+3. git commit, upon this it will run a npm tests such as linting, project tests etc
+4. git push to build and deploy the project
+
 ## Usage
 
 1. Copy and configure `.env.example` to `.env`

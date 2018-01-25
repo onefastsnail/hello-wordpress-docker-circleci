@@ -29,7 +29,7 @@
   "devDependencies": {},
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build",
+    "build": "gulp build && webpack -p",
     "test": "mocha test/files.spec.js"
   },
   "pre-commit": [
