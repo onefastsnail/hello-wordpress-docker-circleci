@@ -47,8 +47,5 @@ module.exports = {
                 })
             }
         ]
-    },
-    resolve: {
-        extensions: ['.js', '.jsx', '.json', '.css', '.scss']
     }
 };

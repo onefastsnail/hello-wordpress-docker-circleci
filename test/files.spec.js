@@ -15,9 +15,9 @@ describe('Project files', function () {
 
     function checkFileOrDirectory(fileOrDirectory) {
         try {
-        fs.statSync(fileOrDirectory);
-        } catch(e) {
-        assert.isNull(e, 'file or folder doesn\'t exist. '+e);
+            fs.statSync(fileOrDirectory);
+        } catch (e) {
+            assert.isNull(e, 'file or folder doesn\'t exist. ' + e);
         }
     }
 
