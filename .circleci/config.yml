@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.1.5-browsers
+      
+    working_directory: ~/myapp
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "composer.json" }}
+            - dependency-cache-
+
+      - run: composer install -n --prefer-dist
+
+      - save_cache:
+          paths:
+            - ./vendor
+          key: dependency-cache-{{ checksum "composer.json" }}
