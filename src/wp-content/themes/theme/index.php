@@ -8,10 +8,13 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
+
+            <?php get_search_form(); ?>
+
             <?php if ( have_posts() ) :
                 while ( have_posts() ) : the_post(); ?>
                     
-                    <p><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></p>
+                    <p class="c-item"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></p>
                     
                 <?php endwhile;
             endif; ?>

@@ -2,12 +2,8 @@ const gulp = require('gulp');
 const changed = require('gulp-changed');
 const runSequence = require('run-sequence');
 const del = require('del');
-const fs = require("fs");
 
-let envPath = '/app/env/.env';
-
-// if not available we must be local
-if (!fs.existsSync(envPath)) envPath = './.env';
+const envPath = './.env';
 
 // load in our .env file
 const dotenv = require('dotenv').config({ path: envPath });

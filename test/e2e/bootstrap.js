@@ -1,5 +1,11 @@
 const puppeteer = require('puppeteer');
 const { expect } = require('chai');
+const fs = require("fs");
+
+const envPath = './.env';
+
+// load in our .env file
+const dotenv = require('dotenv').config({ path: envPath });
 
 // puppeteer options
 const opts = {
@@ -16,6 +22,7 @@ const opts = {
 before(async function () {
     global.expect = expect;
     global.browser = await puppeteer.launch(opts);
+    global.appUrl = process.env.APP_URL;
 });
 
 /*

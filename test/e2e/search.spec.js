@@ -4,7 +4,7 @@ describe('search', function () {
     // as we have a browser in the global node object, for this test lets spin up a new page/tab to work with
     before(async function () {
         page = await browser.newPage();
-        await page.goto('https://google.com');
+        await page.goto(appUrl);
     });
 
     // after the test close that page/tab
@@ -12,24 +12,25 @@ describe('search', function () {
         await page.close();
     })
 
-    it('should have links', async function () {
+    it('should have results', async function () {
 
-        await page.waitFor('input[name=q]');
+        await page.waitFor('input[name=s]');
         // Type our query into the search bar
-        await page.type('input[name=q]', 'onefastsnail');
+        await page.type('input[name=s]', 's');
 
         await page.click('input[type="submit"]');
 
         // Wait for the results to show up
-        await page.waitForSelector('h3 a');
+        await page.waitForSelector('.c-item');
 
         // Extract the results from the page
-        const links = await page.evaluate(() => {
-            const anchors = Array.from(document.querySelectorAll('h3 a'));
-            return anchors.map(anchor => anchor.textContent);
+        const items = await page.evaluate(() => {
+            return Array.from(document.querySelectorAll('.c-item'));
         });
 
-        expect(links).to.be.an('array');
+        console.log(`${items.length} items found`);
+
+        expect(items).to.be.an('array');
 
     });
 

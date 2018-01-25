@@ -4,7 +4,7 @@ describe('tags', function () {
     // as we have a browser in the global node object, for this test lets spin up a new page/tab to work with
     before(async function () {
         page = await browser.newPage();
-        await page.goto('http://localhost');
+        await page.goto(appUrl);
     });
 
     // after the test close that page/tab
