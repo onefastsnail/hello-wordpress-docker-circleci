@@ -47,8 +47,7 @@
   },
   "pre-commit": [
     "test",
-    "lint",
-    "e2e"
+    "lint"
   ],
   "repository": {
     "type": "git",
