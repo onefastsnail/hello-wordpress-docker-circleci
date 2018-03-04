@@ -1,0 +1,44 @@
+.c-media-object {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        width: 20%;
+        position: relative;
+
+        &:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        & + .c-media-object__body {
+            margin-left: 1em;
+        }
+
+    }
+
+    &__body {
+        width: 80%;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        & + .c-media-object__item {
+            margin-left: 1em;
+        }
+    }
+
+    &--top-aligned {
+        align-items: flex-start;
+    }
+
+    & + & {
+        margin-top: 2em;
+    }
+}

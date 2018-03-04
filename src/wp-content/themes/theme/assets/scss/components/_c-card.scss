@@ -4,28 +4,46 @@
     position: relative;
 
     &__image {
+        display: block;
         background: url(http://www.heyuguys.com/images/2015/10/Back-to-the-Future-Promo-Photo.jpg)
             center
             center
             no-repeat;
         background-size: cover;
-        padding-top: 80%;
+        padding-top: 56.25%;
 
         &--skewed {
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
         }
+
+        &--square {
+            padding-top: 100%;
+        }
     }
 
     &__content {
-        padding: 1em;
+        padding: 1.2em;
     }
 
     &__meta {
         margin: 0;
+        color: #ccc;
+        text-transform: capitalize;
     }
 
     &__title {
-        margin: 0.5em 0 2em 0;
+        margin: 0.2em 0 0 0;
+        font-size: 1.4em;
+    }
+
+    &__text {
+         margin: 0.5em 0 2em 0;
+    }
+
+    &__share {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     &__read-more {

@@ -1,7 +1,7 @@
 .l-promos {
     z-index: 1;
     position: relative;
-    margin: -1rem;
+    margin: -1em;
 
     @media only screen and (min-width: 768px) {
         display: flex;
@@ -14,7 +14,7 @@
 
     &__item {
         position: relative;
-        padding: 1rem;
+        padding: 1em;
         width: 100%;
         flex: 0 0 auto;
     }

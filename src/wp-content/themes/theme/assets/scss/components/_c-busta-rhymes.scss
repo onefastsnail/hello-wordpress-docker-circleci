@@ -1,13 +1,14 @@
 .c-busta-rhymes {
-    padding: 3em 0;
+    padding: 10% 0;
     width: 100%;
     color: #fff;
     text-align: center;
+    margin: auto;
 
     &__quote {
         border: 0;
         font-size: 2em;
-        line-height: 1.1;
+        line-height: 1.462;
         font-weight: 600;
         width: 86%;
         position: relative;
@@ -34,9 +35,6 @@
             font-size: 4em;
         }
 
-        @media only screen and (min-width : 1200px) {
-            font-size: 5em;
-        }
     }
 
     &__author {

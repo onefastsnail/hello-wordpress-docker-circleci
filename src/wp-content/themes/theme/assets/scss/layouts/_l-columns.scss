@@ -33,7 +33,7 @@
         }
     }
 
-    &--centered {
+    &--vcentered {
         @include bp(md) {
             // to help make equal columns
             display: flex;

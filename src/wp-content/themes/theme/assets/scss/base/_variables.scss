@@ -1,10 +1,14 @@
-// Colors
-$almost-white: #F5F7F7;
-$almost-black:#22182c;
-$blue: #01A1FF;
+$colours: (
+    almost-black:#222,
+    turquoise: #00ac92
+);
 
 // Link colors to meaningful variables
-$brand-color: $blue;
-$body-bg: $almost-white;
-$link-color: $brand-color;
-$link-hover-color: darken($link-color, 15%);
+$brand-color: map-get($colours, turquoise);
+
+// an array of our themes
+$themes: (
+    x: #e63312,
+    y: #eb5f0a,
+    z: #187d4f
+);
