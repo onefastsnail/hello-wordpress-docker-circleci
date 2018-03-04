@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const changed = require('gulp-changed');
-const runSequence = require('run-sequence');
 const del = require('del');
 
 const envPath = './.env';
@@ -27,7 +26,7 @@ gulp.task('cleanseBuild', function () {
         `!${paths.dist}wp-content`,
         `!${paths.dist}wp-content/uploads`,
         `!${paths.dist}wp-content/uploads/**/*`,
-        `!${paths.dist}wp-content/debug.lo`
+        `!${paths.dist}wp-content/debug.log`
     ]);
 });
 
@@ -51,20 +50,11 @@ gulp.task('php', function () {
 /**
     our watch tasks
  */
-gulp.task('watch', [], function () {
+gulp.task('watch', ['copy'], function () {
     gulp.watch(paths.php, ['php']);
 });
 
 /**
     the default gulp task used for development
  */
-gulp.task('default', function (callback) {
-    runSequence('copy', 'watch', callback);
-});
-
-/**
-    the build task triggered when deploying, or making the project
- */
-gulp.task('build', function (callback) {
-    runSequence('copy', callback);
-});
+gulp.task('default', ['watch']);
