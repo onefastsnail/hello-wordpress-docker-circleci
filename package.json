@@ -30,7 +30,6 @@
     "webpack": "^3.10.0"
   },
   "devDependencies": {
-    "express": "^4.16.2",
     "pre-commit": "^1.2.2",
     "puppeteer": "^1.0.0"
   },

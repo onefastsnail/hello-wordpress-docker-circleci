@@ -1,15 +1,23 @@
 version: 2
 jobs:
-  build:
+
+  # define our job
+  build-and-deploy:
+
+    # define the executor and image to use
     docker:
       - image: circleci/php:7.1-node-browsers
-      
+
+    # define where we checkout out code etc
     working_directory: ~/myapp
 
+    # now the fun part, define our build steps
     steps:
+
+      # checkout our source code
       - checkout
-      
-      # composer
+
+      # run composer and cache the result
       - run: sudo composer self-update
       - restore_cache:
           keys:
@@ -21,7 +29,7 @@ jobs:
             - ./vendor
           key: composer-v1-{{ checksum "composer.json" }}
 
-      # yarn
+      # yarn install and cache the result
       - restore_cache:
           keys:
             - node-v1-{{ checksum "package.json" }}
@@ -31,7 +39,11 @@ jobs:
           key: node-v1-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+
+      # run a little test
       - run: yarn run test
+
+      # build our project
       - run: yarn run build
 
       # a remote environment will be created, and our current primary container will be configured to use it, any docker-related commands we use will be safely executed in this new environment
@@ -47,7 +59,17 @@ jobs:
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
             docker push $DOCKERHUB_REPO:$CIRCLE_BRANCH
-      - run: 
+      - run:
           name: Deploy, ssh in, pull image, and run
           command: |
             cat deploy.sh | ssh -o StrictHostKeyChecking=no $DROPLET_USER@$DROPLET_IP
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build-and-deploy:
+          filters:
+            branches:
+              only:
+                - master
