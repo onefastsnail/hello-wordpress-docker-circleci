@@ -1,8 +1,8 @@
 [![CircleCI](https://circleci.com/gh/onefastsnail/hello-circleci-wordpress-docker.svg?style=svg)](https://circleci.com/gh/onefastsnail/hello-circleci-wordpress-docker)
 
-# Hello Circle CI Wordpress Docker example
+# Hello Circle CI Wordpress Docker
 
-An experiment with a [Wordpress](https://wordpress.org) project running in [Docker](https://www.docker.com/) integrated with [Circle CI](https://circleci.com) from development to production.
+A [Wordpress](https://wordpress.org) project running in [Docker](https://www.docker.com/) integrated with [Circle CI](https://circleci.com) to deploy development to production.
 
 ## Development flow
 
@@ -16,8 +16,14 @@ An experiment with a [Wordpress](https://wordpress.org) project running in [Dock
 1. Copy and configure `.env.example` to `.env`
 2. `docker-compose up -d` to spin up the Docker stack
 3. `yarn install` to install our build deps
-4. `yarn run dev` to run the build tools for development
+4. `yarn dev` to run the build tools for development
 5. And enjoy [http://localhost](http://localhost) 
+
+## Wordpress
+
+### Theme
+
+Under construction.
 
 ## Tests
 
@@ -27,7 +33,7 @@ An experiment with a [Wordpress](https://wordpress.org) project running in [Dock
 
 ## Docker
 
-On development i currently use Docker Composer to orchestrate the containers, on production currently just a simple container, could be done with Ansible also i guess.
+On development i currently use Docker Compose to orchestrate the containers, on production currently just a simple container, could be done with Ansible or a simple bash script also i guess.
 
 As mount bindings overrule the directory the mount points too, in development we can simply mount our code, and in production the code is copied in. 
 

@@ -11,7 +11,7 @@ FROM onefastsnail/wordpress-apache:latest
 
 RUN a2enmod rewrite
 
-COPY . /var/www/html
+COPY ./dist /var/www/html/dist
 
 RUN chown -R www-data:www-data /var/www/html
 

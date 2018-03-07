@@ -18,16 +18,6 @@
  * @package WordPress
  */
 
-require dirname(__DIR__).'/vendor/autoload.php';
-
-try {
-	$dotenv = new Dotenv\Dotenv(dirname(__DIR__));
-	$dotenv->load();
-}
-catch(Exception $e) {
-	//echo "<pre>"; print_r($e); echo "</pre>";
-}
-
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', getenv('MYSQL_DATABASE'));
