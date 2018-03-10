@@ -13,11 +13,10 @@
 
     &__column {
         @include make-sm-column(8);
-        @include make-sm-column-push(2);
 
         // padding in percent as it changes upon the width of the containing element, so scales nicely :)
-        padding-top: 15%;
-        padding-bottom: 15%;
+        padding-top: 20%;
+        padding-bottom: 20%;
 
         // color would be better off in schemes, for now i will leave here
         color: #fff;

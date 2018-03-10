@@ -1,0 +1,29 @@
+$imageTextBp: sm;
+
+.l-image-text {
+
+    $self: &;
+
+    @include bp($imageTextBp) {
+        display: flex;
+    }
+
+    &__image {
+        @include bp($imageTextBp) {
+            width: 70%;
+        }
+    }
+
+    &__text {
+        @include bp($imageTextBp) {
+            width: 30%;
+            padding: 10% $spacing;
+        }
+    }
+
+    &--reverse {
+        @include bp($imageTextBp) {
+            flex-direction: row-reverse;
+        }
+    }
+}

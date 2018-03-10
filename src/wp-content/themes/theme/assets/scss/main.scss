@@ -16,6 +16,7 @@
  */
 @import "mixins/bp";
 @import "mixins/container";
+@import "mixins/section";
 @import "mixins/themify";
 
 /**
@@ -32,15 +33,21 @@
  */
 @import "layouts/l-cards";
 @import "layouts/l-columns";
+@import "layouts/l-header";
+@import "layouts/l-image-text";
 @import "layouts/l-promos";
+@import "layouts/l-intro";
 
 /**
  * Sections
  * Block contain of layouts and components, and those should styled individually with modifiers
  */
+@import "sections/s-base";
 @import "sections/s-biggie";
-@import "sections/s-example";
 @import "sections/s-filter";
+@import "sections/s-footer";
+@import "sections/s-header";
+@import "sections/s-image-text";
 
 /**
  * Components
@@ -50,5 +57,6 @@
 @import "components/c-busta-rhymes";
 @import "components/c-card";
 @import "components/c-media-object";
+@import "components/c-navigation";
 @import "components/c-overlay";
 @import "components/c-something";

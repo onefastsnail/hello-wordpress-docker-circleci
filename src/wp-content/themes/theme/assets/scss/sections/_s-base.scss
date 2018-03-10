@@ -1,11 +1,9 @@
-.s-example {
+.s-base {
+
+    @include section();
 
     &__container {
         @include container();
-    }
-
-    &:not(:last-child) {
-        margin-top: 5%;
     }
 
     // only for demo purposes :P

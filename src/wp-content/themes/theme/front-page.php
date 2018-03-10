@@ -29,8 +29,85 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
+        <div class="l-intro">
+            <div class="h-wysiwyg h-text-center">
+                <h2>Welcome</h2>
+                <p>This is a paragraph of text. Some of the text may be <em>emphasised</em> and some it might even be <strong>strongly emphasised</strong>. Occasionally <q>quoted text</q> may be found within a paragraph &hellip;and of course <a href=
+                >a link</a> may appear at any point in the text. The average paragraph contains five or six sentences although some may contain as little or one or two while others carry on for anything up to ten sentences and beyond.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="s-image-text">
+    <div class="s-image-text__container s-image-text__container--fw">
+        <div class="l-image-text">
+            <div class="l-image-text__image">
+                <div class="c-something"></div>
+            </div>
+            <div class="l-image-text__text">
+                <div class="h-wysiwyg">
+                    <h2>Hello</h2>
+                    <p>This is a paragraph of text. Some of the text may be <em>emphasised</em> and some it might even be <strong>strongly emphasised</strong>. Occasionally <q>quoted text</q> may be found within a paragraph &hellip;and of course.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s-image-text">
+    <div class="s-image-text__container s-image-text__container--fw">
+        <div class="l-image-text l-image-text--reverse">
+            <div class="l-image-text__image">
+                <div class="c-something"></div>
+            </div>
+            <div class="l-image-text__text">
+                <div class="h-wysiwyg">
+                    <h2>Hello</h2>
+                    <p>This is a paragraph of text. Some of the text may be <em>emphasised</em> and some it might even be <strong>strongly emphasised</strong>. Occasionally <q>quoted text</q> may be found within a paragraph &hellip;and of course.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s-image-text">
+    <div class="s-image-text__container">
+        <div class="l-image-text l-image-text--reverse">
+            <div class="l-image-text__image">
+                <div class="c-something"></div>
+            </div>
+            <div class="l-image-text__text">
+                <div class="h-wysiwyg">
+                    <h2>Hello</h2>
+                    <p>This is a paragraph of text. Some of the text may be <em>emphasised</em> and some it might even be <strong>strongly emphasised</strong>. Occasionally <q>quoted text</q> may be found within a paragraph &hellip;and of course.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s-image-text">
+    <div class="s-image-text__container">
+        <div class="l-image-text">
+            <div class="l-image-text__image">
+                <div class="c-something"></div>
+            </div>
+            <div class="l-image-text__text">
+                <div class="h-wysiwyg">
+                    <h2>Hello</h2>
+                    <p>This is a paragraph of text. Some of the text may be <em>emphasised</em> and some it might even be <strong>strongly emphasised</strong>. Occasionally <q>quoted text</q> may be found within a paragraph &hellip;and of course.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-promos" data-count="3">
             <div class="l-promos__item">
                 <div class="c-something">
@@ -73,8 +150,8 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-cards">
 
             <div class="l-cards__item">
@@ -169,8 +246,8 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="row">
             <div class="col-sm-4">
                 <div class="c-something">
@@ -191,9 +268,9 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
+<section class="s-base">
 
-    <div class="s-example__container">
+    <div class="s-base__container">
 
         <div class="c-media-object">
             <div class="c-media-object__item">
@@ -238,14 +315,14 @@ get_header();
 
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div id="react-filter"></div>
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-columns l-columns--vcentered" data-column-count="3">
             <div class="l-columns__item">
                 <div class="c-something">
@@ -272,8 +349,8 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-columns l-columns--vcentered" data-column-count="3">
             <div class="l-columns__item">
                 <p>This is a paragraph of text. Some of the text may be
@@ -309,8 +386,8 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-columns" data-column-count="2">
             <div class="l-columns__item">
                 <p>This is a paragraph of text. Some of the text may be
@@ -334,8 +411,8 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-columns" data-column-count="1">
             <div class="l-columns__item">
                 <p>This is a paragraph of text. Some of the text may be
@@ -350,8 +427,8 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-columns l-columns--no-gutter l-columns--vcentered" data-column-count="3">
             <div class="l-columns__item">
                 <div class="c-something">
@@ -378,8 +455,8 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-columns l-columns--no-gutter l-columns--vcentered" data-column-count="3">
             <div class="l-columns__item t-x">
                 <div class="c-something">
@@ -406,8 +483,8 @@ get_header();
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-columns l-columns--no-gutter l-columns--vcentered" data-column-count="2">
             <div class="l-columns__item">
                 <div class="c-something">
@@ -416,15 +493,15 @@ get_header();
             </div>
             <div class="l-columns__item">
                 <div class="c-something">
-                    <img src="http://fakeimg.pl/600x300/eeeeee/666/?text=img" alt="Jordan Belfort">
+                    <img src="http://fakeimg.pl/900x600/eeeeee/666/?text=img" alt="Jordan Belfort">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="s-example">
-    <div class="s-example__container">
+<section class="s-base">
+    <div class="s-base__container">
         <div class="l-columns l-columns--vcentered" data-column-count="2">
             <div class="l-columns__item">
                 <div>
@@ -440,14 +517,14 @@ get_header();
                 </div>
             </div>
             <div class="l-columns__item">
-                <img src="http://fakeimg.pl/600x300/eeeeee/666/?text=img" alt="Jordan Belfort">
+                <img src="http://fakeimg.pl/900x600/eeeeee/666/?text=img" alt="Jordan Belfort">
             </div>
         </div>
     </div>
 </section>
 
-<section class="s-example s-example--busta-rhymes">
-    <div class="s-example__container">
+<section class="s-base s-base--busta-rhymes">
+    <div class="s-base__container">
         <div class="c-busta-rhymes">
             <blockquote class="c-busta-rhymes__quote">I heard some stupid shit. I... I didn't even want to bring it up. It's just... stupid.</blockquote>
             <div class="c-busta-rhymes__author">

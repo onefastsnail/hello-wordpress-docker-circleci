@@ -1,0 +1,22 @@
+.c-navigation {
+
+    &__list {
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+            a {
+                padding: 0.5em 1em;
+            }
+
+            & + & {
+                margin-left: 1em;
+            }
+
+        }
+    }
+
+}

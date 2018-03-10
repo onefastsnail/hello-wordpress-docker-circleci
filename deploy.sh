@@ -9,6 +9,7 @@ if [ ! -f "$PROJECT_DIR/.env" ]; then
 fi
 
 mkdir -m 755 -p $PROJECT_DIR/uploads
+sudo chown -R www-data:www-data $PROJECT_DIR/uploads
 
 echo 'Pull container...'
 docker pull onefastsnail/hello-circleci-wordpress-docker:master
