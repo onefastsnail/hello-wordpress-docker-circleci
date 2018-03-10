@@ -1,5 +1,5 @@
-.DS_Store
-.git*
+*.DS_Store
+.git/
 dist/composer.json
 dist/license.txt
 dist/readme.html
@@ -7,4 +7,4 @@ dist/wp-content/themes/twentyfifteen
 dist/wp-content/themes/twentyseventeen
 dist/wp-content/themes/twentysixteen
 node_modules/
-npm-debug.log
+*npm-debug.log

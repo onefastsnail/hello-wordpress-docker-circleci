@@ -6,7 +6,7 @@
 *.o
 *.so
 
-#Packages 
+#Packages
 *.7z
 *.dmg
 *.gz
@@ -44,3 +44,5 @@ auth.json
 /dist
 /vendor
 /src/wp-content/plugins
+src/wp-content/uploads/*
+!src/wp-content/uploads/.gitkeep

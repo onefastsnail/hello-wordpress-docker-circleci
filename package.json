@@ -1,7 +1,7 @@
 {
   "name": "hello-circleci-wordpress-docker",
   "version": "1.0.0",
-  "description": "",
+  "description": "hello circleci wordpress docker",
   "main": "index.js",
   "babel": {
     "presets": [
