@@ -9,5 +9,7 @@ RUN a2enmod rewrite
 COPY ./dist /var/www/html/dist
 
 RUN chown -R www-data:www-data /var/www/html
+RUN find . -type d -exec chmod 755 {} \;
+RUN find . -type f -exec chmod 644 {} \;
 
 WORKDIR /var/www/html/dist
