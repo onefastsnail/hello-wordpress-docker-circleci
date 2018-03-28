@@ -1,6 +1,6 @@
 #Compiled source
-*.com
 *.class
+*.com
 *.dll
 *.exe
 *.o
@@ -23,26 +23,26 @@
 logs/
 
 #OS generated files
+._*
 .DS_Store
 .DS_Store?
-._*
-*._*
 .Spotlight-V100
 .Trashes
+*._*
 ebs.db
 Thumbs.db
 
 #misc
-node_modules
-auth.json
 .env
+auth.json
+node_modules
 
 #ignore local persistant data such as databases
 /data
 
 #project
-/dist
-/vendor
-/src/wp-content/plugins
-src/wp-content/uploads/*
 !src/wp-content/uploads/.gitkeep
+/dist
+/src/wp-content/plugins
+/vendor
+src/wp-content/uploads/*

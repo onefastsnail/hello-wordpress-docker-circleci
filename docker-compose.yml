@@ -16,3 +16,5 @@ services:
         - ./data/mariadb:/var/lib/mysql
     env_file:
         - ./.env
+  redis:
+    image: redis:3.2.11

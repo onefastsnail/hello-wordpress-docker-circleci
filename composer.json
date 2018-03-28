@@ -24,7 +24,8 @@
     "composer/installers" : "~1.0",
     "johnpbloch/wordpress-core-installer": "~0.2",
     "johnpbloch/wordpress-core": "^4.9.2",
-    "wpackagist-plugin/fakerpress": "~0.4.9"
+    "wpackagist-plugin/fakerpress": "~0.4.9",
+    "wpackagist-plugin/redis-cache": "1.3.8"
   },
   "extra": {
     "wordpress-install-dir": "vendor/wordpress",

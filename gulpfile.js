@@ -33,7 +33,7 @@ gulp.task('cleanseBuild', function () {
 /**
     copy and our code in the build path
  */
-gulp.task('copy', ['cleanseBuild'], function () {
+gulp.task('copy', ['redis'], function () {
     return gulp.src(paths.copy, { read: true })
         .pipe(gulp.dest(paths.dist));
 });
@@ -45,6 +45,11 @@ gulp.task('php', function () {
     return gulp.src(paths.php, { base: paths.src })
         .pipe(changed(paths.dist))
         .pipe(gulp.dest(paths.dist));
+});
+
+gulp.task('redis', ['cleanseBuild'], function() {
+    return gulp.src(paths.src + 'wp-content/plugins/redis-cache/includes/object-cache.php')
+        .pipe(gulp.dest(paths.dist + 'wp-content'));
 });
 
 /**

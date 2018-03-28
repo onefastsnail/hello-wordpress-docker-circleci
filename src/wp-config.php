@@ -81,6 +81,8 @@ define('WP_DEBUG', getenv('WP_DEBUG'));
 define('WP_DEBUG_LOG', getenv('WP_DEBUG_LOG'));
 define('WP_DEBUG_DISPLAY', getenv('WP_DEBUG_DISPLAY'));
 
+define('WP_REDIS_HOST', getenv('WP_REDIS_HOST'));
+
 // disable file edit
 define('DISALLOW_FILE_EDIT', getenv('DISALLOW_FILE_EDIT'));
 

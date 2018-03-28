@@ -41,6 +41,10 @@ As mount bindings overrule the directory the mount points too, in development we
 
 Coming soon.
 
+## Redis
+
+I have added [Redis](https://hub.docker.com/_/redis/) as a service, just for an example, and it could be handy when there is heavy usage of WP Admin and other WP related operations.
+
 ## Goals
 
 * ~~To share indentical environments between development and production~~
