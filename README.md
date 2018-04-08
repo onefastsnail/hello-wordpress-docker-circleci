@@ -2,13 +2,7 @@
 
 # Hello Circle CI Wordpress Docker
 
-A [Wordpress](https://wordpress.org) project running in [Docker](https://www.docker.com/) integrated with [Circle CI](https://circleci.com) to deploy development to production.
-
-## Development flow
-
-1. Do your code changes
-2. git add and commit, upon committing this will run npm tests such as linting, project tests etc
-3. git push will trigger CircleCI to build and deploy the project
+A [Wordpress](https://wordpress.org) project running in [Docker](https://www.docker.com/) integrated with [Circle CI](https://circleci.com) to deploy from development to production.
 
 ## Usage
 
@@ -18,6 +12,15 @@ A [Wordpress](https://wordpress.org) project running in [Docker](https://www.doc
 4. `yarn install` to install our build deps
 5. `yarn dev` to run the build tools for development
 6. And enjoy [http://localhost](http://localhost) 
+
+## Development flow
+
+1. Run `yarn dev` to start Webpack and Gulp to watch files to bundle
+1. Do your code changes, and commit them
+2. Upon committing this will run npm tests such as linting, project tests etc
+3. A Git push will trigger CircleCI to build and deploy the project
+
+To mock a build in production, ie with copying files rather mounted volumes, run `docker-compose -f docker-compose-production-test.yml up -d --build`
 
 ## Wordpress
 
@@ -59,7 +62,6 @@ I have added [Redis](https://hub.docker.com/_/redis/) as a service, just for an 
 * To use branches/tags for staging and production versions of the application
 * To get CI build time as fast as possible by caching steps, building my own image with the tools required
 * To utilize some logging services for PHP, Nginx
-* Use either docker compose, simple bash commands, maybe Ansible to run the relevant Docker commands on production
 * ~~Fetch Wordpress, plugins and other PHP libs via Composer~~
 * ~~Implement some sort of linting, testing upon every commit to ensure the quality of code being pushed up~~
 

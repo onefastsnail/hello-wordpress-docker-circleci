@@ -3,11 +3,9 @@ services:
   wordpress:
     build:
       context: .
-      dockerfile: Dockerfile-development
+      dockerfile: Dockerfile
     ports:
       - 80:80
-    volumes:
-      - .:/var/www/html
     env_file:
         - ./.env
 

@@ -2,7 +2,7 @@
 
 # some vars to configure
 PROJECT_DIR=/srv/www/site
-APP_CONTAINER_NAME=app
+APP_CONTAINER_NAME=wordpress
 APP_IMAGE=onefastsnail/hello-circleci-wordpress-docker:master
 
 # test .env file is there?
