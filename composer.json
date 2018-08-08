@@ -1,7 +1,7 @@
 {
-  "name": "hello-circlci-wordpress-docker",
+  "name": "hello-wordpress-docker-circleci",
   "type": "project",
-  "description": "A Wordpress build",
+  "description": "A Wordpress project",
   "homepage": "https://www.onefastsnail.com/",
   "authors": [
     {

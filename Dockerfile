@@ -1,4 +1,4 @@
-FROM onefastsnail/phpfpm-nginx-supervisord
+FROM onefastsnail/phpfpm-nginx-supervisor-debian
 
 # Configure nginx
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf

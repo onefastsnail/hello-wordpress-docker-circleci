@@ -1,5 +1,5 @@
 {
-  "name": "hello-circleci-wordpress-docker",
+  "name": "hello-wordpress-docker-circleci",
   "version": "1.0.0",
   "description": "hello circleci wordpress docker",
   "main": "index.js",
