@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "hello circleci wordpress docker",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.11.3 <9",
+    "npm": ">=5.6.0 <6"
+  },
   "babel": {
     "presets": [
       "env"
@@ -33,7 +37,6 @@
     "webpack": "^3.10.0"
   },
   "devDependencies": {
-    "pre-commit": "^1.2.2",
     "puppeteer": "^1.0.0"
   },
   "scripts": {
@@ -47,10 +50,6 @@
     "e2e": "mocha test/e2e/bootstrap.js --timeout 15000 --recursive test/e2e",
     "lint": "./node_modules/.bin/eslint src/wp-content/themes/theme/assets/js/index.js"
   },
-  "pre-commit": [
-    "test",
-    "lint"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onefastsnail/hello-circleci-wordpress-docker.git"

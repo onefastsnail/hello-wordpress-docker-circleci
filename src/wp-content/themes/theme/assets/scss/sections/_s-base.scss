@@ -1,13 +1,12 @@
 .s-base {
+  @include section();
 
-    @include section();
+  &__container {
+    @include container();
+  }
 
-    &__container {
-        @include container();
-    }
-
-    // only for demo purposes :P
-    &--busta-rhymes {
-        background: $brand-color;
-    }
+  // only for demo purposes :P
+  &--busta-rhymes {
+    background: $brand-color;
+  }
 }

@@ -1,31 +1,30 @@
 .s-image-text {
+  $self: &;
 
-    $self: &;
+  position: relative;
 
-    position: relative;
+  &__container {
+    @include container();
 
-    &__container {
-        @include container();
-
-        &--fw {
-            @include bp(sm) {
-                width: 100%;
-                max-width: 100%;
-            }
-        }
+    &--fw {
+      @include bp(sm) {
+        width: 100%;
+        max-width: 100%;
+      }
     }
+  }
 
-    &__image {
-        width: 60%;
-        position: absolute;
-        height: 100%;
+  &__image {
+    width: 60%;
+    position: absolute;
+    height: 100%;
+  }
+
+  & + & {
+    margin-top: $spacing;
+
+    @include bp(sm) {
+      margin-top: 0;
     }
-
-    & + & {
-        margin-top: $spacing;
-
-        @include bp(sm) {
-            margin-top: 0;
-        }
-    }
+  }
 }

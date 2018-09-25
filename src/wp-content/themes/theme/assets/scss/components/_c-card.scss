@@ -1,58 +1,56 @@
 .c-card {
-    width: 100%;
-    background: #fff;
-    position: relative;
+  width: 100%;
+  background: #fff;
+  position: relative;
 
-    &__image {
-        display: block;
-        background: url(http://www.heyuguys.com/images/2015/10/Back-to-the-Future-Promo-Photo.jpg)
-            center
-            center
-            no-repeat;
-        background-size: cover;
-        padding-top: 56.25%;
+  &__image {
+    display: block;
+    background: url(http://www.heyuguys.com/images/2015/10/Back-to-the-Future-Promo-Photo.jpg)
+      center center no-repeat;
+    background-size: cover;
+    padding-top: 56.25%;
 
-        &--skewed {
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
-        }
-
-        &--square {
-            padding-top: 100%;
-        }
+    &--skewed {
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95%);
     }
 
-    &__content {
-        padding: 1.2em;
+    &--square {
+      padding-top: 100%;
     }
+  }
 
-    &__meta {
-        margin: 0;
-        color: #ccc;
-        text-transform: capitalize;
-    }
+  &__content {
+    padding: 1.2em;
+  }
 
-    &__title {
-        margin: 0.2em 0 0 0;
-        font-size: 1.4em;
-    }
+  &__meta {
+    margin: 0;
+    color: #ccc;
+    text-transform: capitalize;
+  }
 
-    &__text {
-         margin: 0.5em 0 2em 0;
-    }
+  &__title {
+    margin: 0.2em 0 0 0;
+    font-size: 1.4em;
+  }
 
-    &__share {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  &__text {
+    margin: 0.5em 0 2em 0;
+  }
 
-    &__read-more {
-        &:after {
-            content: "";
-        }
-    }
+  &__share {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    &--shadow {
-        box-shadow: 0 8px 16px -6px rgba(0, 0, 0, 0.2);
+  &__read-more {
+    &:after {
+      content: "";
     }
+  }
+
+  &--shadow {
+    box-shadow: 0 8px 16px -6px rgba(0, 0, 0, 0.2);
+  }
 }

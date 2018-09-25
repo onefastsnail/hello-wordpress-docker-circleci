@@ -1,24 +1,23 @@
 .s-biggie {
+  position: relative;
 
+  &__container {
+    @include container();
     position: relative;
+  }
 
-    &__container {
-        @include container();
-        position: relative;
-    }
+  &__row {
+    @include make-row();
+  }
 
-    &__row {
-        @include make-row();
-    }
+  &__column {
+    @include make-sm-column(8);
 
-    &__column {
-        @include make-sm-column(8);
+    // padding in percent as it changes upon the width of the containing element, so scales nicely :)
+    padding-top: 20%;
+    padding-bottom: 20%;
 
-        // padding in percent as it changes upon the width of the containing element, so scales nicely :)
-        padding-top: 20%;
-        padding-bottom: 20%;
-
-        // color would be better off in schemes, for now i will leave here
-        color: #fff;
-    }
+    // color would be better off in schemes, for now i will leave here
+    color: #fff;
+  }
 }

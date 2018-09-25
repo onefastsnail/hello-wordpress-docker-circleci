@@ -53,16 +53,16 @@ jobs:
       - run:
           name: Build application Docker image
           command: |
-            docker build -t $DOCKERHUB_REPO:$CIRCLE_BRANCH .
+            docker build -t $DOCKER_REPO:$CIRCLE_BRANCH .
       - run:
           name: Push the Docker image to the registry
           command: |
             docker login -u $DOCKER_USER -p $DOCKER_PASS
-            docker push $DOCKERHUB_REPO:$CIRCLE_BRANCH
-      - run:
-          name: Deploy, ssh in, pull image, and run
-          command: |
-            cat deploy.sh | ssh -o StrictHostKeyChecking=no $DROPLET_USER@$DROPLET_IP
+            docker push $DOCKER_REPO:$CIRCLE_BRANCH
+      # - run:
+      #     name: Deploy, ssh in, pull image, and run
+      #     command: |
+      #       cat deploy.sh | ssh -o StrictHostKeyChecking=no $PRODUCTION_USER@$PRODUCTION_IP
 
 workflows:
   version: 2

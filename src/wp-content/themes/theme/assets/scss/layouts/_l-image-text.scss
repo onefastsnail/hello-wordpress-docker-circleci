@@ -1,29 +1,28 @@
 $imageTextBp: sm;
 
 .l-image-text {
+  $self: &;
 
-    $self: &;
+  @include bp($imageTextBp) {
+    display: flex;
+  }
 
+  &__image {
     @include bp($imageTextBp) {
-        display: flex;
+      width: 70%;
     }
+  }
 
-    &__image {
-        @include bp($imageTextBp) {
-            width: 70%;
-        }
+  &__text {
+    @include bp($imageTextBp) {
+      width: 30%;
+      padding: 10% $spacing;
     }
+  }
 
-    &__text {
-        @include bp($imageTextBp) {
-            width: 30%;
-            padding: 10% $spacing;
-        }
+  &--reverse {
+    @include bp($imageTextBp) {
+      flex-direction: row-reverse;
     }
-
-    &--reverse {
-        @include bp($imageTextBp) {
-            flex-direction: row-reverse;
-        }
-    }
+  }
 }

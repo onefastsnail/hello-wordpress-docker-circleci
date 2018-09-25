@@ -1,6 +1,6 @@
 $colours: (
-    almost-black:#222,
-    turquoise: #00ac92
+  almost-black: #222,
+  turquoise: #00ac92
 );
 
 // Link colors to meaningful variables
@@ -8,9 +8,9 @@ $brand-color: map-get($colours, turquoise);
 
 // an array of our themes
 $themes: (
-    x: #e63312,
-    y: #eb5f0a,
-    z: #187d4f
+  x: #e63312,
+  y: #eb5f0a,
+  z: #187d4f
 );
 
 $spacing: 5%; // will create a spacing matrix shortly

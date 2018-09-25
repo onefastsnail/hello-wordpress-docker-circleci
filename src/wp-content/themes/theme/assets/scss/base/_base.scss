@@ -1,32 +1,36 @@
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-	box-sizing: inherit;
-	outline:none;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  outline: none;
 }
 
 body {
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.462;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.462;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 
-	transition: all 0.2s;
+  transition: all 0.2s;
 
-	&:hover, &:focus {
-		text-decoration: none;
-		cursor: pointer;
-		color: inherit;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+  }
 
-	&:focus {}
+  &:focus {
+  }
 }

@@ -1,15 +1,15 @@
 .l-header {
-    @include make-row();
-    display: flex;
-    align-items: center;
+  @include make-row();
+  display: flex;
+  align-items: center;
 
-    &__logo {
-        @include make-xs-column(4);
-        @include make-md-column(4);
-    }
+  &__logo {
+    @include make-xs-column(4);
+    @include make-md-column(4);
+  }
 
-    &__navigation {
-        @include make-xs-column(8);
-        text-align: right;
-    }
+  &__navigation {
+    @include make-xs-column(8);
+    text-align: right;
+  }
 }

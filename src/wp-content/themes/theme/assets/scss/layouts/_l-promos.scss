@@ -1,55 +1,55 @@
 .l-promos {
-    z-index: 1;
+  z-index: 1;
+  position: relative;
+  margin: -1em;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (min-width: 992px) {
+    height: 24em;
+  }
+
+  &__item {
     position: relative;
-    margin: -1em;
+    padding: 1em;
+    width: 100%;
+    flex: 0 0 auto;
+  }
 
-    @media only screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
+  &[data-count="2"] {
+    .l-promos__item {
+      @media only screen and (min-width: 768px) {
+        width: 50%;
+      }
     }
+  }
 
+  &[data-count="3"] {
     @media only screen and (min-width: 992px) {
-        height: 24em;
+      flex-direction: column;
     }
 
-    &__item {
-        position: relative;
-        padding: 1em;
-        width: 100%;
-        flex: 0 0 auto;
-    }
+    .l-promos__item {
+      @media only screen and (min-width: 768px) {
+        width: 50%;
 
-    &[data-count="2"] {
-        .l-promos__item {
-            @media only screen and (min-width: 768px) {
-                width: 50%;
-            }
+        &:first-child {
+          width: 100%;
         }
-    }
+      }
 
-    &[data-count="3"] {
-        @media only screen and (min-width: 992px) {
-            flex-direction: column;
+      @media only screen and (min-width: 992px) {
+        width: 50%;
+        height: 50%;
+
+        &:first-child {
+          width: 50%;
+          height: 100%;
         }
-
-        .l-promos__item {
-            @media only screen and (min-width: 768px) {
-                width: 50%;
-
-                &:first-child {
-                    width: 100%;
-                }
-            }
-
-            @media only screen and (min-width: 992px) {
-                width: 50%;
-                height: 50%;
-
-                &:first-child {
-                    width: 50%;
-                    height: 100%;
-                }
-            }
-        }
+      }
     }
+  }
 }

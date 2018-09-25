@@ -36,9 +36,7 @@ Thumbs.db
 .env
 auth.json
 node_modules
-
-#ignore local persistant data such as databases
-/data
+supervisord.pid
 
 #project
 !src/wp-content/uploads/.gitkeep
