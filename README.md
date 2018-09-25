@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/onefastsnail/hello-circleci-wordpress-docker.svg?style=svg)](https://circleci.com/gh/onefastsnail/hello-circleci-wordpress-docker)
+[![CircleCI](https://circleci.com/gh/onefastsnail/hello-wordpress-docker-circleci.svg?style=svg)](https://circleci.com/gh/onefastsnail/hello-wordpress-docker-circleci)
 
 # Hello Wordpress Docker CircleCI
 
