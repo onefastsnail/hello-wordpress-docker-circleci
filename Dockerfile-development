@@ -8,10 +8,9 @@ COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 # Configure supervisord
 COPY ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# install node and yarn
-RUN bash -c "curl -sL https://deb.nodesource.com/setup_8.x | bash -"
+# install node
+RUN bash -c "curl -sL https://deb.nodesource.com/setup_12.x | bash -"
 RUN bash -c "apt-get install -y nodejs"
-RUN bash -c "npm install -g yarn"
 
 # install php composer
 RUN bash -c "curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer"

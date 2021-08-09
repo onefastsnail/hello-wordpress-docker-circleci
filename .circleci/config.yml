@@ -29,22 +29,22 @@ jobs:
             - ./vendor
           key: composer-v1-{{ checksum "composer.json" }}
 
-      # yarn install and cache the result
+      # npm install and cache the result
       - restore_cache:
           keys:
             - node-v1-{{ checksum "package.json" }}
             - node-v1-
-      - run: yarn install --production
+      - run: npm install --production
       - save_cache:
           key: node-v1-{{ checksum "package.json" }}
           paths:
             - ./node_modules
 
       # run a little test
-      - run: yarn run test
+      - run: npm run test
 
       # build our project
-      - run: yarn run build
+      - run: npm run build
 
       # a remote environment will be created, and our current primary container will be configured to use it, any docker-related commands we use will be safely executed in this new environment
       - setup_remote_docker

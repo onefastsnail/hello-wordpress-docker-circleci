@@ -1,5 +1,5 @@
 {
-  "name": "hello-wordpress-docker-circleci",
+  "name": "onefastsnail/hello-wordpress-docker-circleci",
   "type": "project",
   "description": "A Wordpress project",
   "homepage": "https://www.onefastsnail.com/",
@@ -21,18 +21,24 @@
   },
   "require": {
     "php": ">=7.1.0",
-    "composer/installers" : "~1.0",
-    "johnpbloch/wordpress-core-installer": "~0.2",
-    "johnpbloch/wordpress-core": "^4.9.2",
-    "wpackagist-plugin/fakerpress": "~0.4.9",
-    "wpackagist-plugin/redis-cache": "1.3.8"
+    "composer/installers": "*",
+    "johnpbloch/wordpress-core-installer": "*",
+    "johnpbloch/wordpress-core": "^5",
+    "wpackagist-plugin/fakerpress": "*",
+    "wpackagist-plugin/redis-cache": "*"
   },
   "extra": {
     "wordpress-install-dir": "vendor/wordpress",
     "installer-paths": {
-      "src/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "src/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-      "src/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+      "src/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "src/wp-content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "src/wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
     }
   }
 }
